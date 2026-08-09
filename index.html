@@ -4,7 +4,40 @@
   <head>
     <title>DarkGodJim001的私人空间</title>
     <link rel="icon" href="https://vzge.me/face/DarkGodJim001.png">
+    <link rel="stylesheet" href="./ui/modern_dark_ui.css">
   <body>
     <h1 id="title">DarkGodJim001的私人空间</h1>
+    <div id="introduce">
+        <h2 id="introduce-title">自我介绍</h2>
+        <span id="introduce-content">我是DarkGodJim001,一个我的世界玩家，我<strong id="introduce-age"></strong>岁。</span>
+    </div>
+
+    <div id="accout">
+      <h2 id="accout-title">我的账号</h2>
+      <button id="xhs" onclick="window.location.href = 'https://www.xiaohongshu.com/user/profile/6747f4ee0000000008009aac'">小红书</button>
+      <button id="bilibili" onclick="window.location.href='https://space.bilibili.com/3546736920365309?spm_id_from=333.1007.0.0'">Bilibili</button>
+      <button id="curseforge" onclick="window.location.href='https://www.curseforge.com/members/darkgodjim001/projects'">Curseforge</button>
+      <button id="modrinth" onclick="window.location.href='https://modrinth.com/user/mahai'">Modrinth</button>
+    </div>
+
+    <copyright id="copyright">
+      <p id="copyright-1">此站点最后更新于2026年8月9日,遵循MIT许可。</p>
+      <p id="copyright-2">Copyright (c) 2026 DarkGodJim001</p>
+      <p id="copyright-3">未经许可不可下载源码用于盈利。</p>
+      <a id="copyright-mit" href="https://opensource.org/licenses/MIT">MIT许可</a>
+      <a id="oldsite" href="https://mahaiworker.github.io/member/darkgodjim001/index.html">旧站</a>
+    </copyright>
+
+    <script src="./api/date.js"></script>
+    <script>
+        let now = new Date()
+        let result = NowToDate("2014-01-08",`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`)
+
+        const ageElement = document.getElementById("introduce-age");
+        
+        const age = result.y
+        ageElement.textContent = age;
+        
+    </script>
   </body>
 </html>
